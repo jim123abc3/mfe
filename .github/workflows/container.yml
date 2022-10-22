@@ -7,14 +7,9 @@ on:
     paths:
     - 'packages/container/**'
 
-defaults:
-  run:
-    working-directory: packages/container
-
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - run: npm install
