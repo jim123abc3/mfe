@@ -1,6 +1,13 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: test yml
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/container/**'
+defaults:
+  run:
+    working-directory: packages/container
 jobs:
   build:
     runs-on: ubuntu-latest
