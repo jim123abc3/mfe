@@ -1,13 +1,10 @@
-name: test yml
+name: Trigger Jenkins Build [ Build-Portal ]
 on:
   push:
-    branches:
-      - main
-    paths:
-      - 'packages/container/**'
-defaults:
-  run:
-    working-directory: packages/container
+    branches: [ main ]
+    paths: 
+       - 'packages/container/**'
+    types: [closed]
 jobs:
   build:
     runs-on: ubuntu-latest
